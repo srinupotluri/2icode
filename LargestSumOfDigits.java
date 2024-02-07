@@ -23,16 +23,17 @@ public class LargestSumOfDigits {
 
         for (int i = 0; i < arr.length; i++) {
             System.out.print("Enter string " + (i + 1) + ": ");
-            // check if the length of string maximum of 12
+           arr[i] = str.nextLine();
+            // check if the length of string maximum of 12 if its not null
             if (arr[i] != null) {
-                int stringlength = arr[i].length ( );
+                int stringlength = arr[i].length( );
                 if (stringlength > 12) {
                     System.out.println ( "String length cannot exceed 12 characters. Please enter again." );
                     i--; // Decrement i to allow the user to input the string again
-                    continue;
+                    //  continue;
                 }
             }
-            arr[i] = str.nextLine();
+
         }
         int largestSum = findLargestSumOfDigits(arr);
         System.out.println("Largest sum of digits: " + largestSum);
